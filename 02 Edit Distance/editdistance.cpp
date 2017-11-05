@@ -25,8 +25,8 @@ void read(char *filename, char del)
 		exit(0);
 	}
 	/* Reading strings alphanumeric [a-zA-Z0-9] */
-	cin>>x;
-	cin>>y;
+	getline(cin, x, '\n');
+	getline(cin, y, '\n');
 
 	/* Reading costs <copy>,<insert>,<replace>,<delete> seperated by del*/
 	string temp;
