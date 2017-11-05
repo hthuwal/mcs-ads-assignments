@@ -1,0 +1,44 @@
+Problem
+Given two character strings x[1..n] and y[1..m], the edit distance is the cost of transforming the string x to string y using a minimum number of operations from the set {copy, replace, insert, delete}. Design an efficient algorithm to find the minimum edit distance between two given strings.
+
+
+# Input
+
+Input consists of three lines. 
+
+Line 1: String x.
+
+Line 2: String y.
+
+Line 3: List of cost of operations {copy, insert, replace, delete}.
+
+
+
+# Output
+
+Single Integer value equal to (cost)%10^9+7 of converting string x to string y.
+
+
+
+# Constraints
+
+Length of strings "L" can be anything.
+
+Cost of any operation(C) can be: -10^12 <= C <= 10^12.
+
+# Note carefully the following instructions for the submission of programming assignment 2.
+
+1. Your code should accept as input (on the command line) the name of a file. This file will contain 3 lines - line 1: string x, line 2: string y, line 3: cost list. The cost list is in the format <copy>,<insert>,<replace>,<delete>.
+
+2. The strings will be alphanumeric ([a-zA-Z0-9]*) and your code must be case-sensitive. ('a' is a different character from 'A').
+
+3. Your code should output the total cost of transforming string x into string y.
+
+4. Zip your file(s) and submit on Moodle (link will be made available shortly). You may name your zip file "<your_entry_number>.zip".
+
+5. Important: Ensure that your code runs on GCL machines. We will not be able to evaluate your code on your laptops/ personal machines.
+
+6. 3. If there are any other assumptions you make in your code then specify them clearly in a separate text file called README. Do NOT email us asking for clarifications regarding corner cases.
+
+-- 
+Neha 
