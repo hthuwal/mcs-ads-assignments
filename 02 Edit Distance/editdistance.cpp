@@ -17,13 +17,8 @@ lli cp_cost, in_cost, re_cost, del_cost;
  * @param filename [name of file containing inputs]
  * @param del [character seperating the costs]
  */
-void read(char *filename, char del)
+void read(char del)
 {
-	if(freopen(filename, "r", stdin)==NULL)
-	{
-		printf("Cannot open input file. Please ensure that the path \"%s\" is correct!\n", filename);
-		exit(0);
-	}
 	/* Reading strings alphanumeric [a-zA-Z0-9] */
 	getline(cin, x, '\n');
 	getline(cin, y, '\n');
@@ -39,7 +34,7 @@ void read(char *filename, char del)
 	getline(cin, temp, del);
 	re_cost = atol(temp.c_str());
 
-	getline(cin, temp, del);
+	getline(cin, temp, '\n');
 	del_cost = atol(temp.c_str());
 }
 
@@ -50,6 +45,21 @@ int main(int argc, char *argv[])
 		cout<<"Program expects one command line argument : The path to input file. None given!\n";
 		exit(0);
 	}
-	read(argv[1], ',');
+	
+	if(freopen(argv[1], "r", stdin)==NULL)
+	{
+		printf("Cannot open input file. Please ensure that the path \"%s\" is correct!\n", argv[1]);
+		exit(0);
+	}
 
+	lli t;
+	string temp;
+	getline(cin, temp, '\n');
+	t = atol(temp.c_str());
+
+	while(t--)
+	{
+		cout<<"t is "<<t<<endl;
+		read(',');
+	}
 }
