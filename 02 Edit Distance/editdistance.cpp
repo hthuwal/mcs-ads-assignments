@@ -3,10 +3,14 @@
 #include <iostream>
 #include <istream>
 #include <string>
+
+#define lli long long int
+#define M 1000000007
+
 using namespace std;
 
 string x,y;
-int cp_cost, in_cost, re_cost, del_cost;
+lli cp_cost, in_cost, re_cost, del_cost;
 
 /**
  * Read strings and cost values from file
@@ -24,19 +28,19 @@ void read(char *filename, char del)
 	cin>>x;
 	cin>>y;
 
-	/* Reading costs seperated by del*/
+	/* Reading costs <copy>,<insert>,<replace>,<delete> seperated by del*/
 	string temp;
 	getline(cin, temp, del);
-	cp_cost = atoi(temp.c_str());
+	cp_cost = atol(temp.c_str());
 
 	getline(cin, temp, del);
-	in_cost = atoi(temp.c_str());
+	in_cost = atol(temp.c_str());
 
 	getline(cin, temp, del);
-	re_cost = atoi(temp.c_str());
+	re_cost = atol(temp.c_str());
 
 	getline(cin, temp, del);
-	del_cost = atoi(temp.c_str());
+	del_cost = atol(temp.c_str());
 }
 
 int main(int argc, char *argv[])
