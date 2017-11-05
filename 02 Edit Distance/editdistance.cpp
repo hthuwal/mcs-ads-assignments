@@ -104,7 +104,7 @@ int main(int argc, char *argv[])
 
 	while(t--)
 	{
-		read(',');
+		read(' ');
 		cout<<editdistance_dp_space_optimized()<<endl;
 	}
 }
