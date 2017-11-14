@@ -12,32 +12,6 @@ using namespace std;
 string x,y;
 lli cp_cost, in_cost, re_cost, del_cost;
 
-/**
- * Read strings and cost values from file
- * @param filename [name of file containing inputs]
- * @param del [character seperating the costs]
- */
-void read(char del)
-{
-	/* Reading strings alphanumeric [a-zA-Z0-9] */
-	getline(cin, x, '\n');
-	getline(cin, y, '\n');
-
-	/* Reading costs <copy>,<insert>,<replace>,<delete> seperated by del*/
-	string temp;
-	getline(cin, temp, del);
-	cp_cost = atol(temp.c_str());
-
-	getline(cin, temp, del);
-	in_cost = atol(temp.c_str());
-
-	getline(cin, temp, del);
-	re_cost = atol(temp.c_str());
-
-	getline(cin, temp, '\n');
-	del_cost = atol(temp.c_str());
-}
-
 lli editdistance_dp_space_optimized()
 {
 	lli n = x.length();  /* Length of string x*/
@@ -98,13 +72,11 @@ int main(int argc, char *argv[])
 	}
 
 	lli t;
-	string temp;
-	getline(cin, temp, '\n');
-	t = atol(temp.c_str());
+	cin>>t;
 
 	while(t--)
 	{
-		read(' ');
+		cin>>x>>y>>cp_cost>>in_cost>>re_cost>>del_cost;
 		cout<<editdistance_dp_space_optimized()<<endl;
 	}
 }
